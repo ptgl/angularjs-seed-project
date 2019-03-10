@@ -1,1 +1,73 @@
 <h1>This is detail page</h1>
+<div class="container">
+    <div class="col0">
+        <div>
+            <input placeholder="Search by keyword"><button>Search</button>
+
+        </div>
+        <table>
+            <tr>
+                <th><input type="radio"></th>
+                <th>Account No</th>
+                <th>Bank Name</th>
+                <th>Amount</th>
+                <th>Maturity Date</th>
+            </tr>
+            <tr ng-repeat="act in banks.bankList track by $index">
+                <td><input type="radio" ng-model="$parent.selected" ng-change="view()" ng-value="$index"></td>
+                <td>{{act.accountNo}}</td>
+                <td>{{act.bankName}}</td>
+                <td>{{act.amount}}</td>
+                <td>{{act.maturityDate}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col0" ng-if="account">
+        <h2>{{account.accountNo}}</h2>
+        <div class="section1">
+            <div class="photo">
+
+            </div>
+            <div class="data">
+                <div class="row">
+                    <div class="col">
+                        <label>First Name</label><br>
+                        <input type="text" ng-model="account.accountNo"/>
+                    </div>
+                    <div class="col">
+                            <label>Last Name</label><br>
+                            <input type="text" ng-model="account.bankName"/>
+                    </div>
+                    <div class="col">
+                            <label>Initial</label><br>
+                            <input type="text" ng-model="account.amount"/>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                        <div class="col">
+                                <label>Password</label><br>
+                                <input type="text" ng-model="account.transactionDate"/>
+                        </div>
+                        <div class="col">
+                                <label>Confirm Password</label><br>
+                                <input type="text" ng-model="account.maturityDate"/>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col">
+                                <label>Birthday</label><br>
+                                <input type="text"/>
+                        </div>
+                        <div class="col">
+                                <label>EmplyeeId</label><br>
+                                <input type="text"/>
+                        </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

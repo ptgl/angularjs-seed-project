@@ -1,3 +1,52 @@
 h1{
     color:red;
 }
+
+.error{
+    color:red;
+}
+
+.container{
+    display: flex;
+}
+
+.col0{
+    width: 50%;
+    margin: 10px;
+}
+
+.col0:first-child{
+    border-right: 1px solid black;
+}
+
+td, th{
+    padding: 5px;
+}
+
+.section1{
+    display: flex;
+}
+
+.data .col{
+    margin: 10px;
+}
+
+.data .row:not(:first-child) .col:nth-child(2){
+    align-items: flex-end;
+}
+
+.section1 .row:not(:first-child) input{
+    width: 250px;
+}
+
+.photo{
+    width: 100px;
+    height:100px;
+    background-color: pink;
+}
+
+.row{
+    display:flex;
+    flex-direction: row;
+}
+
